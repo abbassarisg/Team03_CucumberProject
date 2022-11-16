@@ -6,9 +6,8 @@ configuration.properties
 target
 .txt
 .jpg
-.xml
-pom.xml
-src/test/java/api/baseUrl/C01.java
+.iml
+
 
 
 
