@@ -1,4 +1,4 @@
-package utilities.stepdefinitions.uiStepDefinitions;
+package stepdefinitions.uiStepDefinitions;
 
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
