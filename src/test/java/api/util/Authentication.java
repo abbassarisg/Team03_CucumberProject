@@ -12,9 +12,11 @@ import static io.restassured.RestAssured.given;
 public class Authentication {
     public static void main(String[] args) {
 
+        /*
         String guncelToken = generateToken();
 
         System.out.println("Guncel Token : " +guncelToken);
+        */
     }
 
     public static String generateToken() {

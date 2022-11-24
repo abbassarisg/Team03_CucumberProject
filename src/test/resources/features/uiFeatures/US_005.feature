@@ -60,6 +60,36 @@ Feature: US_005 hastalar hastahaneden randevu olusturabilmeli
     And kullanici SSN kismini bos biraktiginda cikan uyari yazisini dogrular
     And kullanici sayfayi kapatir
 
+  @register
+  Scenario: TC09 kullanici randevu alip kaydoldugunda, profillerini gorebilir ve uygulamada oturum acabilir
+    Then kullanici sayfada sag ustte bulunan kisi ikonuna gelir ve register sekmesine tiklar
+    And kullanici 2 saniye bekler
+    And kullanici SSN kismina randevu alirken girdigi "ssn" numarasini girer
+    And kullanici 2 saniye bekler
+    And kullanici First Name kismina randevu alirken girdigi "firstName" ismini girer
+    And kullanici 2 saniye bekler
+    And kullanici Last Name kismina randevu alirken girdigi "lastName" ismini girer
+    And kullanici 2 saniye bekler
+    And kullanici Username kismina bir "userName" girer
+    And kullanici 2 saniye bekler
+    And kullanici Email kismina randevu alirken girdigi "email" adresini girer
+    And kullanici 2 saniye bekler
+    And kullanici New Password kismina bir "password" girer
+    And kullanici 2 saniye bekler
+    And kullanici New Password confirmation kismina tekrar "password" girer
+    And kullanici 2 saniye bekler
+    And kullanici Register butonuna tiklar
+    And kullanici uygulamada oturum acmak icin sisteme kaydoldugunu dogrular
+    And kullanici sayfayi kapatir
+
+
+
+
+
+
+
+
+
 
 
 
