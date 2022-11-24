@@ -60,16 +60,36 @@ public class AsimPage {
     @FindBy (xpath = "//div[text()='Phone number is required.']")
     public WebElement phoneWarning;
 
+    @FindBy (xpath = "//a[@aria-haspopup='true']")
+    public WebElement kisiSekmesi;
 
+    @FindBy (xpath = "//span[text()='Register']")
+    public WebElement register;
 
+    @FindBy (xpath = "//input[@id='ssn']")
+    public WebElement registerSsn;
 
+    @FindBy (xpath = "//input[@id='firstName']")
+    public WebElement registerFirstName;
 
+    @FindBy (xpath = "//input[@id='lastName']")
+    public WebElement registerLastName;
 
+    @FindBy (xpath = "//input[@id='username']")
+    public WebElement registerUsername;
 
+    @FindBy (xpath = "//input[@id='email']")
+    public WebElement registerEmail;
 
+    @FindBy (xpath = "//input[@id='firstPassword']")
+    public WebElement registerPassword1;
 
+    @FindBy (xpath = "//input[@id='secondPassword']")
+    public WebElement registerPassword2;
 
+    @FindBy (id = "register-submit")
+    public WebElement registerSubmit;
 
-
-
+    @FindBy (xpath = "//div[text()='Email is already in use!']")
+    public WebElement registerEmailWarning;
 }

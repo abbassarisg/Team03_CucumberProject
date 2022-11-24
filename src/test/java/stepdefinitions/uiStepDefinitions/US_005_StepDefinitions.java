@@ -9,6 +9,7 @@ import org.openqa.selenium.Keys;
 import pages.AsimPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class US_005_StepDefinitions {
 
@@ -126,5 +127,73 @@ public class US_005_StepDefinitions {
     public void kullaniciSSNKisminiBosBiraktigindaCikanUyariYazisiniDogrular() {
 
         Assert.assertTrue(medunna.ssnWarning.isDisplayed());
+    }
+
+    @Then("kullanici sayfada sag ustte bulunan kisi ikonuna gelir ve register sekmesine tiklar")
+    public void kullaniciSayfadaSagUstteBulunanKisiIkonunaGelirVeRegisterSekmesineTiklar() {
+
+        medunna.kisiSekmesi.click();
+
+        medunna.register.click();
+    }
+
+    @And("kullanici SSN kismina randevu alirken girdigi {string} numarasini girer")
+    public void kullaniciSSNKisminaRandevuAlirkenGirdigiNumarasiniGirer(String ssn) {
+
+        medunna.registerSsn.sendKeys(ConfigReader.getProperty(ssn));
+    }
+
+    @And("kullanici First Name kismina randevu alirken girdigi {string} ismini girer")
+    public void kullaniciFirstNameKisminaRandevuAlirkenGirdigiIsminiGirer(String firstName) {
+
+        medunna.registerFirstName.sendKeys(ConfigReader.getProperty(firstName));
+    }
+
+    @And("kullanici Last Name kismina randevu alirken girdigi {string} ismini girer")
+    public void kullaniciLastNameKisminaRandevuAlirkenGirdigiIsminiGirer(String lastName) {
+
+        medunna.registerLastName.sendKeys(ConfigReader.getProperty(lastName));
+    }
+
+    @And("kullanici Username kismina bir {string} girer")
+    public void kullaniciUsernameKisminaBirGirer(String userName) {
+
+        medunna.registerUsername.sendKeys(ConfigReader.getProperty(userName));
+    }
+
+    @And("kullanici Email kismina randevu alirken girdigi {string} adresini girer")
+    public void kullaniciEmailKisminaRandevuAlirkenGirdigiAdresiniGirer(String email) {
+
+        medunna.registerEmail.sendKeys(ConfigReader.getProperty(email));
+    }
+
+    @And("kullanici New Password kismina bir {string} girer")
+    public void kullaniciNewPasswordKisminaBirGirer(String password) {
+
+        medunna.registerPassword1.sendKeys(ConfigReader.getProperty(password));
+    }
+
+    @And("kullanici New Password confirmation kismina tekrar {string} girer")
+    public void kullaniciNewPasswordConfirmationKisminaTekrarGirer(String password) {
+
+        medunna.registerPassword2.sendKeys(ConfigReader.getProperty(password));
+    }
+
+    @And("kullanici Register butonuna tiklar")
+    public void kullaniciRegisterButonunaTiklar() {
+
+        medunna.registerSubmit.click();
+    }
+
+    @And("kullanici uygulamada oturum acmak icin sisteme kaydoldugunu dogrular")
+    public void kullaniciUygulamadaOturumAcmakIcinSistemeKaydoldugunuDogrular() {
+
+        Assert.assertFalse(medunna.registerEmailWarning.isDisplayed());
+    }
+
+    @And("kullanici {int} saniye bekler")
+    public void kullaniciSaniyeBekler(int saniye) {
+
+        ReusableMethods.waitFor(saniye);
     }
 }

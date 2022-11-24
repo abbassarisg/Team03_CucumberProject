@@ -25,7 +25,7 @@ public class US_005_StepDefinitions extends MedunnaBaseUrl {
     @When("kullanici adrese GET istegi gonderir")
     public void kullaniciAdreseGETIstegiGonderir() {
 
-        String url = "https://medunna.com/api/patients/309193";
+        String url = "https://medunna.com/api/patients/3091934";
 
         UserDataPojo user = new UserDataPojo("adembakirci", "Adem", "Bakırcı",
                                              "adembakirci1245@gmail.com", true,
@@ -36,8 +36,8 @@ public class US_005_StepDefinitions extends MedunnaBaseUrl {
                                                            null, "adembakirci124@gmail.com", null,
                                                            user, null, null, null, null);
 
-        Response response = given().headers("Authorization", "Bearer " +generateToken()).when().get(url);
-
+        Response response = given().header("Authorization", "Bearer " +generateToken()).
+                            when().get(url);
 
         AppointmentPojo actualData = ObjectMapperUtil.convertJsonToJava(response.asString(), AppointmentPojo.class);
     }
