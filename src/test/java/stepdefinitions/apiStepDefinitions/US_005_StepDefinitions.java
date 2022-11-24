@@ -25,7 +25,7 @@ public class US_005_StepDefinitions extends MedunnaBaseUrl {
     @When("kullanici adrese GET istegi gonderir")
     public void kullaniciAdreseGETIstegiGonderir() {
 
-        String url = "https://medunna.com/api/patients/3091934";
+        String url = "https://medunna.com/api/patients/309193";
 
         UserDataPojo user = new UserDataPojo("adembakirci", "Adem", "Bakırcı",
                                              "adembakirci1245@gmail.com", true,
