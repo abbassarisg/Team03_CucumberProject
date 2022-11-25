@@ -4,9 +4,9 @@
 configuration.properties
 .idea
 target
-.txt
-.jpg
-.iml
+*.txt
+*.jpg
+*.iml
 Team03_CucumberProject.iml
 
 
