@@ -1,6 +1,5 @@
 package stepdefinitions.uiStepDefinitions;
 
-import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,7 +10,7 @@ import pages.AsimPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US005_StepDefinitions {
+public class US_005_StepDefinitions {
 
     AsimPage medunna = new AsimPage();
 
@@ -79,5 +78,53 @@ public class US005_StepDefinitions {
     public void kullaniciLastNameKisminiBosBiraktigindaCikanUyariYazisiniDogrular() {
 
         Assert.assertTrue(medunna.lastNameWarning.isDisplayed());
+    }
+
+    @Then("kullanici Email kismina bir email adresi girer")
+    public void kullaniciEmailKisminaBirEmailAdresiGirer() {
+
+        medunna.emailEmpty.sendKeys("adembakirci124@gmail.com");
+    }
+
+    @And("kullanici Email kisminda bir email adresi oldugunu dogrular")
+    public void kullaniciEmailKismindaBirEmailAdresiOldugunuDogrular() {
+
+        Assert.assertTrue(medunna.emailFull.isDisplayed());
+    }
+
+    @Then("kullanici Email kismini bos birakir")
+    public void kullaniciEmailKisminiBosBirakir() {
+
+        medunna.emailEmpty.sendKeys(Keys.TAB);
+    }
+
+    @And("kullanici Email kismini bos biraktiginda cikan uyari yazisini dogrular")
+    public void kullaniciEmailKisminiBosBiraktigindaCikanUyariYazisiniDogrular() {
+
+        Assert.assertTrue(medunna.emailWarning.isDisplayed());
+    }
+
+    @Then("kullanici SSN kismina uc ve bes rakamindan sonra - iceren ve dokuz rakamdan olusan bir numara girer")
+    public void kullaniciSSNKisminaUcVeBesRakamindanSonraIcerenVeDokuzRakamdanOlusanBirNumaraGirer() {
+
+        medunna.ssnEmpty.sendKeys("124-98-4782");
+    }
+
+    @And("kullanici SSN kisminda uc ve bes rakamindan sonra - iceren ve dokuz rakamdan olusan bir numara oldugunu dogrular")
+    public void kullaniciSSNKismindaUcVeBesRakamindanSonraIcerenVeDokuzRakamdanOlusanBirNumaraOldugunuDogrular() {
+
+        Assert.assertTrue(medunna.ssnFull.isDisplayed());
+    }
+
+    @Then("kullanici SSN kismini bos birakir")
+    public void kullaniciSSNKisminiBosBirakir() {
+
+        medunna.ssnEmpty.sendKeys(Keys.TAB);
+    }
+
+    @And("kullanici SSN kismini bos biraktiginda cikan uyari yazisini dogrular")
+    public void kullaniciSSNKisminiBosBiraktigindaCikanUyariYazisiniDogrular() {
+
+        Assert.assertTrue(medunna.ssnWarning.isDisplayed());
     }
 }
