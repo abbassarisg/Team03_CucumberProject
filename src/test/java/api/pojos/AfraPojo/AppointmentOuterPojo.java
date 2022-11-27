@@ -1,6 +1,7 @@
 package api.pojos.AfraPojo;
 
-import io.cucumber.messages.internal.com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class AppointmentOuterPojo {
