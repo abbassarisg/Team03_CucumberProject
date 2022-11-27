@@ -12,9 +12,11 @@ import static io.restassured.RestAssured.given;
 public class Authentication {
     public static void main(String[] args) {
 
+        /*
         String guncelToken = generateToken();
 
         System.out.println("Guncel Token : " +guncelToken);
+        */
     }
 
     public static String generateToken() {
@@ -29,9 +31,9 @@ public class Authentication {
 
         String endPoint = "https://www.medunna.com/api/authenticate";
 
-        Response response = given().contentType(ContentType.JSON).body(postBody).when().post(endPoint);
+        Response response1 = given().contentType(ContentType.JSON).body(postBody).when().post(endPoint);
 
-        JsonPath token = response.jsonPath();
+        JsonPath token = response1.jsonPath();
 
         return token.getString("id_token");
     }
