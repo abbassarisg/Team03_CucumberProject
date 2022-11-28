@@ -96,15 +96,15 @@ public class register {
     }
 
 
-    @And("kullanici {int} saniye bekler")
-    public void kullaniciSaniyeBekler(int saniye) {
+  // @And("kullanici {int} saniye bekler")
+  // public void kullaniciSaniyeBekler(int saniye) {
 
-        try {
-            Thread.sleep(saniye*1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }
+  //     try {
+  //         Thread.sleep(saniye*1000);
+  //     } catch (InterruptedException e) {
+  //         throw new RuntimeException(e);
+  //     }
+   // }
 
     @And("kullanicinin kayıt olamadıgı dogrulanir")
     public void kullanicininKayıtOlamadıgıDogrulanir() {

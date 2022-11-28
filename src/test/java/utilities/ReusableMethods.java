@@ -21,6 +21,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 import static java.lang.Thread.sleep;
 
@@ -221,5 +222,51 @@ public class ReusableMethods {
         JavascriptExecutor js=(JavascriptExecutor)Driver.getDriver();
         String value=js.executeScript("return document.getElementById('"+elementId+"').value").toString();
         return value;
+    }
+//--------------------------------------------------------------------------------------
+    // Deniz Screenshot
+    public static String denizgetScreenshotWebElement(String name,WebElement element) throws IOException {
+        String date = new SimpleDateFormat("yyyy/MM/dd/hh-mm-ss").format(new Date());
+        // TakesScreenshot is an interface of selenium that takes the screenshot
+        File source = element.getScreenshotAs(OutputType.FILE);
+        // full path to the screenshot location
+        String wElementSS = System.getProperty("user.dir") + "/target/WElementScreenshots/" + name + "_" + date + ".png";
+        File finalDestination = new File(wElementSS);
+        // save the screenshot to the path given
+        FileUtils.copyFile(source, finalDestination);
+        return  wElementSS;
+    }
+
+    //====== JS Scroll Click ====//
+    public static void jsScrollClick(WebElement webElement) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        try {
+            webElement.click();
+        } catch (Exception e) {
+            js.executeScript("arguments[0].scrollIntoView(true);", webElement);
+            js.executeScript("arguments[0].click()", webElement);
+            waitFor(1);
+        }
+    }
+
+    //====== JS Scroll ====//
+    public static void jsScroll(WebElement webElement) {
+
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].scrollIntoView(true);", webElement);
+    }
+
+    // Random
+    public static Random random() { // Istenilen yerden rast gele secim yapilmasi icin eklendi
+
+        Random random;
+        return random = new Random();
+    }
+
+    // Select
+    public static Select select(WebElement ddm) {
+
+        Select select;
+        return select = new Select(ddm);
     }
 }
