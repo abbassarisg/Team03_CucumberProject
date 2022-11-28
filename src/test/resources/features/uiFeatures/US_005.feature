@@ -74,9 +74,9 @@ Feature: US_005 hastalar hastahaneden randevu olusturabilmeli
     And kullanici 2 saniye bekler
     And kullanici Email kismina randevu alirken girdigi "email" adresini girer
     And kullanici 2 saniye bekler
-    And kullanici New Password kismina bir "password" girer
+    And kullanici New Password kismina bir "password1" girer
     And kullanici 2 saniye bekler
-    And kullanici New Password confirmation kismina tekrar "password" girer
+    And kullanici New Password confirmation kismina tekrar "password1" girer
     And kullanici 2 saniye bekler
     And kullanici Register butonuna tiklar
     And kullanici uygulamada oturum acmak icin sisteme kaydoldugunu dogrular

@@ -5,204 +5,205 @@ import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class AppointmentPojo {
 
-    private String firstName;
-    private String lastName;
-    private Object birthDate;
-    private String phone;
-    private String gender;
-    private String bloodGroup;
-    private Object adress;
-    private String email;
-    private Object description;
-    private UserDataPojo user;
-    private Object appointments;
-    private Object inPatients;
-    private Object country;
-    private Object cstate;
+    private String createdBy;
+    private String createdDate;
+    private int id;
+    private String startDate;
+    private String endDate;
+    private String status;
+    private String anamnesis;
+    private String treatment;
+    private String diagnosis;
+    private String prescription;
+    private String description;
+    private String physician;
+    private PatientPojo patient;
+    private String ctests;
 
     public AppointmentPojo() {
 
     }
 
-    public AppointmentPojo(String firstName, String lastName, Object birthDate, String phone, String gender,
-                           String bloodGroup, Object adress, String email, Object description, UserDataPojo user,
-                           Object appointments, Object inPatients, Object country, Object cstate) {
+    public AppointmentPojo(String createdBy, String createdDate, int id, String startDate, String endDate, String status,
+                           String anamnesis, String treatment, String diagnosis, String prescription, String description,
+                           String physician, PatientPojo patient, String ctests) {
 
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.birthDate = birthDate;
-        this.phone = phone;
-        this.gender = gender;
-        this.bloodGroup = bloodGroup;
-        this.adress = adress;
-        this.email = email;
+        this.createdBy = createdBy;
+        this.createdDate = createdDate;
+        this.id = id;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.status = status;
+        this.anamnesis = anamnesis;
+        this.treatment = treatment;
+        this.diagnosis = diagnosis;
+        this.prescription = prescription;
         this.description = description;
-        this.user = user;
-        this.appointments = appointments;
-        this.inPatients = inPatients;
-        this.country = country;
-        this.cstate = cstate;
+        this.physician = physician;
+        this.patient = patient;
+        this.ctests = ctests;
     }
 
-    public String getFirstName() {
+    public String getCreatedBy() {
 
-        return firstName;
+        return createdBy;
     }
 
-    public void setFirstName(String firstName) {
+    public void setCreatedBy(String createdBy) {
 
-        this.firstName = firstName;
+        this.createdBy = createdBy;
     }
 
-    public String getLastName() {
+    public String getCreatedDate() {
 
-        return lastName;
+        return createdDate;
     }
 
-    public void setLastName(String lastName) {
+    public void setCreatedDate(String createdDate) {
 
-        this.lastName = lastName;
+        this.createdDate = createdDate;
     }
 
-    public Object getBirthDate() {
+    public int getId() {
 
-        return birthDate;
+        return id;
     }
 
-    public void setBirthDate(Object birthDate) {
+    public void setId(int id) {
 
-        this.birthDate = birthDate;
+        this.id = id;
     }
 
-    public String getPhone() {
+    public String getStartDate() {
 
-        return phone;
+        return startDate;
     }
 
-    public void setPhone(String phone) {
+    public void setStartDate(String startDate) {
 
-        this.phone = phone;
+        this.startDate = startDate;
     }
 
-    public String getGender() {
+    public String getEndDate() {
 
-        return gender;
+        return endDate;
     }
 
-    public void setGender(String gender) {
+    public void setEndDate(String endDate) {
 
-        this.gender = gender;
+        this.endDate = endDate;
     }
 
-    public String getBloodGroup() {
+    public String getStatus() {
 
-        return bloodGroup;
+        return status;
     }
 
-    public void setBloodGroup(String bloodGroup) {
+    public void setStatus(String status) {
 
-        this.bloodGroup = bloodGroup;
+        this.status = status;
     }
 
-    public Object getAdress() {
+    public String getAnamnesis() {
 
-        return adress;
+        return anamnesis;
     }
 
-    public void setAdress(Object adress) {
+    public void setAnamnesis(String anamnesis) {
 
-        this.adress = adress;
+        this.anamnesis = anamnesis;
     }
 
-    public String getEmail() {
+    public String getTreatment() {
 
-        return email;
+        return treatment;
     }
 
-    public void setEmail(String email) {
+    public void setTreatment(String treatment) {
 
-        this.email = email;
+        this.treatment = treatment;
     }
 
-    public Object getDescription() {
+    public String getDiagnosis() {
+
+        return diagnosis;
+    }
+
+    public void setDiagnosis(String diagnosis) {
+
+        this.diagnosis = diagnosis;
+    }
+
+    public String getPrescription() {
+
+        return prescription;
+    }
+
+    public void setPrescription(String prescription) {
+
+        this.prescription = prescription;
+    }
+
+    public String getDescription() {
 
         return description;
     }
 
-    public void setDescription(Object description) {
+    public void setDescription(String description) {
 
         this.description = description;
     }
 
-    public UserDataPojo getUser() {
+    public String getPhysician() {
 
-        return user;
+        return physician;
     }
 
-    public void setUser(UserDataPojo user) {
+    public void setPhysician(String physician) {
 
-        this.user = user;
+        this.physician = physician;
     }
 
-    public Object getAppointments() {
+    public PatientPojo getPatient() {
 
-        return appointments;
+        return patient;
     }
 
-    public void setAppointments(Object appointments) {
+    public void setPatient(PatientPojo patient) {
 
-        this.appointments = appointments;
+        this.patient = patient;
     }
 
-    public Object getInPatients() {
+    public String getCtests() {
 
-        return inPatients;
+        return ctests;
     }
 
-    public void setInPatients(Object inPatients) {
+    public void setCtests(String ctests) {
 
-        this.inPatients = inPatients;
-    }
-
-    public Object getCountry() {
-
-        return country;
-    }
-
-    public void setCountry(Object country) {
-
-        this.country = country;
-    }
-
-    public Object getCstate() {
-
-        return cstate;
-    }
-
-    public void setCstate(Object cstate) {
-
-        this.cstate = cstate;
+        this.ctests = ctests;
     }
 
     @Override
     public String toString() {
 
         return "AppointmentPojo{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", birthDate=" + birthDate +
-                ", phone='" + phone + '\'' +
-                ", gender='" + gender + '\'' +
-                ", bloodGroup='" + bloodGroup + '\'' +
-                ", adress=" + adress +
-                ", email='" + email + '\'' +
-                ", description=" + description +
-                ", user=" + user +
-                ", appointments=" + appointments +
-                ", inPatients=" + inPatients +
-                ", country=" + country +
-                ", cstate=" + cstate +
+                "createdBy='" + createdBy + '\'' +
+                ", createdDate='" + createdDate + '\'' +
+                ", id=" + id +
+                ", startDate='" + startDate + '\'' +
+                ", endDate='" + endDate + '\'' +
+                ", status='" + status + '\'' +
+                ", anamnesis='" + anamnesis + '\'' +
+                ", treatment='" + treatment + '\'' +
+                ", diagnosis='" + diagnosis + '\'' +
+                ", prescription='" + prescription + '\'' +
+                ", description='" + description + '\'' +
+                ", physician='" + physician + '\'' +
+                ", patient=" + patient +
+                ", ctests='" + ctests + '\'' +
                 '}';
     }
 }
+
 
