@@ -1,13 +1,10 @@
 package stepdefinitions.apiStepDefinitions;
 
-import api.baseUrl.MedunnaBaseUrl;
 import api.pojos.AppointmentPojo;
 import api.pojos.PatientPojo;
-import api.pojos.UserDataPojo;
 import api.pojos.UserPojo;
 import api.util.ObjectMapperUtil;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
@@ -18,7 +15,7 @@ import static api.util.Authentication.generateToken;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
-public class US_005_StepDefinitions {
+public class US_005_API_StepDefinitions {
 
     Response response;
     UserPojo user;
