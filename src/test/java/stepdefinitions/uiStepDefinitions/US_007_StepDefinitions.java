@@ -13,7 +13,7 @@ import utilities.Driver;
 import java.time.LocalDate;
 
 
-public class KenanStep {
+public class US_007_StepDefinitions {
     KenanPage kenanPage = new KenanPage();
     Actions actions = new Actions(Driver.getDriver());
     LocalDate date = LocalDate.now();

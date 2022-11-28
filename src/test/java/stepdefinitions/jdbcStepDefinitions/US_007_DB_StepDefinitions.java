@@ -1,6 +1,5 @@
 package stepdefinitions.jdbcStepDefinitions;
 
-import api.pojos.Kenan007Pojo;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -8,15 +7,13 @@ import io.cucumber.java.en.Then;
 import utilities.DatabaseUtility;
 
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import static org.testng.AssertJUnit.assertTrue;
 import static utilities.DatabaseUtility.getColumnData;
 
 
-public class dbKenanStep {
+public class US_007_DB_StepDefinitions {
 
     List<Object> actualData;
 

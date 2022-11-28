@@ -15,7 +15,7 @@ import utilities.Driver;
 import static io.restassured.RestAssured.given;
 
 
-public class US007ApiStep extends Authentication {
+public class US_007_API_StepDefinitions extends Authentication {
 
     Response response;
     RequestSpecification spec;
