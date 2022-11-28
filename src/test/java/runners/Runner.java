@@ -13,7 +13,8 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml"},
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@Smoke"
+        tags = "@Smoke",
+        dryRun = false
 )
 
 public class Runner {
@@ -21,7 +22,6 @@ public class Runner {
     /*
     -> Runner class'inda class body icerisinde hicbir sey bulunmaz.
     -> Bu class'i onemli yapan 2 adet notasyon vardir.
-        dryRun = false
        1.@RunWith(Cucumber.class) : Runner class'ina calisma ozelligi katar.
        2.@CucumberOptions : features, glue, tags, dryRun yer alir.
        -features : feature dosyalarinin dosya yolunu alir.
