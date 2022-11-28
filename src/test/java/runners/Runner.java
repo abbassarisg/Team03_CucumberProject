@@ -9,12 +9,11 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 
         plugin = {"html:target/cucumber-reports.html",
-                  "json:target/json-reports/cucumber.json",
-                  "junit:target/xml-report/cucumber.xml"},
+                "json:target/json-reports/cucumber.json",
+                "junit:target/xml-report/cucumber.xml"},
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@knnPozitifTest01",
-        dryRun = false
+        tags = "@Smoke"
 )
 
 public class Runner {
@@ -22,6 +21,7 @@ public class Runner {
     /*
     -> Runner class'inda class body icerisinde hicbir sey bulunmaz.
     -> Bu class'i onemli yapan 2 adet notasyon vardir.
+        dryRun = false
        1.@RunWith(Cucumber.class) : Runner class'ina calisma ozelligi katar.
        2.@CucumberOptions : features, glue, tags, dryRun yer alir.
        -features : feature dosyalarinin dosya yolunu alir.
