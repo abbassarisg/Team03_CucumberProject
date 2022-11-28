@@ -1,4 +1,4 @@
-package api.testdata;
+package api.testData;
 
 public class C02 {
 }
