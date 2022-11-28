@@ -15,7 +15,7 @@ import static api.util.Authentication.generateToken;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
-public class US_005_StepDefinitions extends MedunnaBaseUrl {
+public class US_005_StepDefinitions {
 
     Response response;
     UserDataPojo user;
@@ -36,10 +36,16 @@ public class US_005_StepDefinitions extends MedunnaBaseUrl {
                                                            null, "adembakirci124@gmail.com", null,
                                                            user, null, null, null, null);
 
-        Response response = given().headers("Authorization", "Bearer " +generateToken()).when().get(url);
+        System.out.println("Ex : " +expectedData);
 
+        response = given().header("Authorization", "Bearer " +generateToken()).
+                            when().get(url);
+
+        response.prettyPrint();
 
         AppointmentPojo actualData = ObjectMapperUtil.convertJsonToJava(response.asString(), AppointmentPojo.class);
+
+        System.out.println("Ac : " +actualData);
     }
 
     @Then("kullanici Status kodun {int} oldugunu dogrular")
@@ -47,7 +53,7 @@ public class US_005_StepDefinitions extends MedunnaBaseUrl {
 
         int actualCode = response.getStatusCode();
 
-        assertEquals(expectedCode, actualCode);
+        Assert.assertEquals(expectedCode, actualCode);
     }
 
     @And("kullanici kaydedilen hastanin bilgilerini dogrular")
