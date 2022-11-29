@@ -90,13 +90,13 @@ public class US_008_StepDefinitions {
         }
 
     }
-
+/*
     @And("sayfayi kapatir")
     public void sayfayiKapatir() {
 
         Driver.closeDriver();
     }
-
+*/
     @And("kullanici buyuk harf,rakam ve ozel karakter ile en az yedi karakter new password girer")
     public void kullaniciBuyukHarfRakamVeOzelKarakterIleEnAzYediKarakterNewPasswordGirer() throws IOException {
 
