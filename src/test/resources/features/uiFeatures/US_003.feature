@@ -1,6 +1,6 @@
 @Smoke
 
-  Feature: US003 Registration sayfasında guclu sifre girilmeli ve
+  Feature: US003 Registration sayfasinda guclu sifre girilmeli ve
            "Password strength" seviyeleri gorulmelidir.
 
 Background: Ortak adimlar

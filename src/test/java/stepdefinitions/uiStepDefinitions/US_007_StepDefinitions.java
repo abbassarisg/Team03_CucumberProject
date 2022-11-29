@@ -107,14 +107,14 @@ public class US_007_StepDefinitions {
     public void closeThePage() {
     }
 
-    @Then("kullanici {int} saniye bekler")
-    public void kullaniciSaniyeBekler(int istenenSure) {
-        try {
-            Thread.sleep(istenenSure * 1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }
+ //  @Then("kullanici {int} saniye bekler")
+ //  public void kullaniciSaniyeBekler(int istenenSure) {
+ //      try {
+ //          Thread.sleep(istenenSure * 1000);
+ //      } catch (InterruptedException e) {/
+ //          throw new RuntimeException(e);
+ //      }
+ //  }
 
 
 

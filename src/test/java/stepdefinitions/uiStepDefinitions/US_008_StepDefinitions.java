@@ -175,7 +175,7 @@ public class US_008_StepDefinitions {
         page.newPasswordBox.sendKeys("javA025!!");
     }
 
-    @And("kullanici save butonuna tiklar")
+    @And("kullanici save butonuna tiklar.")
     public void kullaniciSaveButonunaTiklar() {
 
 
