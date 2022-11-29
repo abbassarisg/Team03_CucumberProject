@@ -190,10 +190,10 @@ public class US_005_StepDefinitions {
 
         Assert.assertFalse(medunna.registerEmailWarning.isDisplayed());
     }
-
+   /*
     @And("kullanici {int} saniye bekler")
     public void kullaniciSaniyeBekler(int saniye) {
 
         ReusableMethods.waitFor(saniye);
-    }
+    }*/
 }
