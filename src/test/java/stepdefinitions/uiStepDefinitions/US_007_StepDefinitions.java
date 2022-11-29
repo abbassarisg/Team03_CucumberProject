@@ -106,7 +106,7 @@ public class US_007_StepDefinitions {
     @Then("Close the page")
     public void closeThePage() {
     }
-/*
+
     @Then("kullanici {int} saniye bekler")
     public void kullaniciSaniyeBekler(int istenenSure) {
         try {
@@ -116,7 +116,7 @@ public class US_007_StepDefinitions {
         }
     }
 
-*/
+
 
 
 
