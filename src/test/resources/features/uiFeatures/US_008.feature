@@ -50,7 +50,7 @@ Feature: US008 Kullanici giris yaptiginda Password sekmesi duzenlenebilir olmali
     Given kullanici "medunnaUrl" url'e gider
     When kullanici login olup account menuden password linke tiklar
     Then kullanici current passwordu girer ve new password ve confirm password'e eski sifreyi girer
-    And kullanici save butonuna tiklar
+    And kullanici save butonuna tiklar.
     And kullanici 2 saniye bekler
     And kullanici Password changed! uyarisinin gorunur olmadigini dogrular
     And sayfayi kapatir
